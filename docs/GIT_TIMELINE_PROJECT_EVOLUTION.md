@@ -314,7 +314,7 @@ cognitive_extraction:
 ### Codebase Evolution
 
 ```mermaid
-gitgraph
+gitGraph:
     commit id: "Foundation"
     branch memory-system
     checkout memory-system

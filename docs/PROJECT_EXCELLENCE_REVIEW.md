@@ -121,13 +121,22 @@ Most systems optimize for either performance OR intelligence. OrKa is the only f
 OrKa has solved the "complexity accessibility paradox" - making enterprise-grade AI orchestration accessible to non-programmers while providing unlimited power for advanced users.
 
 ```mermaid
-pyramid
-    title Developer Experience Excellence
+graph TD
+    A[Developer Experience Excellence] --> B[Enterprise Ready]
+    B --> C[Power User Capable]
+    C --> D[Developer Friendly]
+    D --> E[Non-Programmer Accessible]
     
-    "Non-Programmer Accessible" : YAML workflows, examples, documentation
-    "Developer Friendly" : CLI tools, debugging, testing
-    "Power User Capable" : Custom agents, advanced patterns, enterprise features  
-    "Enterprise Ready" : Production monitoring, scaling, compliance
+    B1[Production monitoring, scaling, compliance] -.-> B
+    C1[Custom agents, advanced patterns, enterprise features] -.-> C
+    D1[CLI tools, debugging, testing] -.-> D
+    E1[YAML workflows, examples, documentation] -.-> E
+    
+    style A fill:#1e88e5,color:#fff
+    style B fill:#43a047,color:#fff
+    style C fill:#fb8c00,color:#fff
+    style D fill:#8e24aa,color:#fff
+    style E fill:#e53935,color:#fff
 ```
 
 **Evidence of Excellence:**

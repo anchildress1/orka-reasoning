@@ -1061,16 +1061,16 @@ sequenceDiagram
 ```mermaid
 graph TB
     subgraph "Multi-turn Conversation"
-        Q1[User: "Explain quantum computing"]
+        Q1[User: Explain quantum computing]
         R1[System: Comprehensive quantum explanation]
         
-        Q2[User: "How does it compare to classical computing?"]
+        Q2[User: How does it compare to classical computing?]
         R2[System: Builds on quantum explanation]
         
-        Q3[User: "What are the current limitations?"]
+        Q3[User: What are the current limitations?]
         R3[System: References previous quantum context]
         
-        Q4[User: "When will it be practical?"]
+        Q4[User: When will it be practical?]
         R4[System: Considers full conversation history]
     end
     
@@ -1168,32 +1168,28 @@ flowchart TD
 ### Key Metrics Dashboard
 
 ```mermaid
-dashboard
-    title OrKa Intelligent Q&A Flow Metrics
-    
-    section Performance
-        Memory Search Latency: 2.4ms
-        Classification Time: 156ms
-        Response Generation: 723ms
-        Total Flow Time: 1.015s
-        
-    section Memory System
-        Total Memories: 1247
-        Short-term: 423 (34%)
-        Long-term: 824 (66%)
-        Hit Rate: 87%
-        
-    section Quality Metrics
-        Context Usage Rate: 73%
-        User Corrections: 2.1%
-        Followup Rate: 45%
-        Satisfaction Score: 4.2/5
-        
-    section System Health
-        Redis Connectivity: Healthy
-        OpenAI API Status: Healthy
-        Memory Cleanup: Last run 5min ago
-        Error Rate: 0.3%
+mindmap
+  root((OrKa Q&A Metrics))
+    Performance
+      Memory Search: 2.4ms
+      Classification: 156ms
+      Response Gen: 723ms
+      Total Flow: 1.015s
+    Memory System
+      Total: 1247
+      Short-term: 423 (34%)
+      Long-term: 824 (66%)
+      Hit Rate: 87%
+    Quality
+      Context Usage: 73%
+      Corrections: 2.1%
+      Followup: 45%
+      Satisfaction: 4.2/5
+    System Health
+      Redis: Healthy
+      OpenAI: Healthy
+      Cleanup: 5min ago
+      Error Rate: 0.3%
 ```
 
 ### Real-time Monitoring Commands
