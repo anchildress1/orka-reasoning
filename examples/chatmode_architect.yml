@@ -1,0 +1,34 @@
+# Example ChatMode Configuration for Architectural Documentation
+# This demonstrates the high-level-big-picture-architect ChatMode
+
+orchestrator:
+  id: architectural-documentation-workflow
+  strategy: sequential
+  agents:
+    - documentation_generator
+
+agents:
+  - id: documentation_generator
+    type: architectural-documentation
+    prompt: |
+      Generate comprehensive architectural documentation for: {{ input }}
+      
+      Focus on:
+      - System overview and purpose
+      - Core components and their interactions
+      - Data flows and integration points
+      - Error handling and reliability behaviors
+      - Security considerations
+      - Performance characteristics
+    
+    # ChatMode-specific parameters
+    params:
+      workspace_path: "."
+      artifact_type: "{{ artifact_type | default('doc') }}"
+      depth: "{{ depth | default('overview') }}"
+      targets: "{{ targets | default('system') }}"
+      constraints:
+        format: "markdown"
+        outputDir: "docs/"
+        diagram: "{{ diagram_type | default('flowchart') }}"
+      user_name: "{{ user_name | default('OrKa User') }}"

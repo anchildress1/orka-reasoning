@@ -55,6 +55,10 @@ def create_parser() -> argparse.ArgumentParser:
     watch_parser.add_argument("--run-id", help="Filter by run ID")
     watch_parser.set_defaults(func=memory_watch)
 
+    # ChatMode command
+    from orka.cli.chatmode_cli import setup_chatmode_command
+    setup_chatmode_command(subparsers)
+
     return parser
 
 
@@ -101,6 +105,11 @@ def main(argv: list[str] | None = None) -> int:
             if args.verbose:
                 run_args.append("--verbose")
             return run_cli(run_args)
+
+        # Handle chatmode command
+        if args.command == "chatmode":
+            from orka.cli.chatmode_cli import run_chatmode_command
+            return run_chatmode_command(args)
 
         # Execute other commands
         if hasattr(args, "func"):

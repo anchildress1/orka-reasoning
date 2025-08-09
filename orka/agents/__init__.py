@@ -143,6 +143,7 @@ Module Components
 
 # Import all agent types from their respective modules
 from .agents import BinaryAgent, ClassificationAgent
+from .architectural_documentation_agent import ArchitecturalDocumentationAgent
 from .base_agent import BaseAgent, LegacyBaseAgent
 from .llm_agents import (
     OpenAIAnswerBuilder,
@@ -154,6 +155,7 @@ from .validation_and_structuring_agent import ValidationAndStructuringAgent
 
 # Register all available agent types
 AGENT_REGISTRY = {
+    "architectural-documentation": ArchitecturalDocumentationAgent,
     "binary": BinaryAgent,
     "classification": ClassificationAgent,
     "local_llm": LocalLLMAgent,
