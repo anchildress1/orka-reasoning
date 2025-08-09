@@ -1,0 +1,19 @@
+flowchart TD
+    A[Start: Document the newly implemented ChatMode system for architectural documentation and diagram generation] --> B[Initialize ChatMode,ArchitecturalDocumentationAgent,HighLevelArchitectChatMode]
+    B --> C[Process Input]
+    C --> D{Validate Input}
+    D -->|Valid| E[Execute Business Logic]
+    D -->|Invalid| F[Return Error]
+    E --> G[Process Data]
+    G --> H[Generate Response]
+    H --> I[End: Success]
+    F --> J[End: Error]
+    
+    subgraph "Core Processing"
+        E
+        G
+    end
+    
+    style A fill:#e1f5fe
+    style I fill:#c8e6c9
+    style J fill:#ffcdd2

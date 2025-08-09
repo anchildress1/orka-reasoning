@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant User
+    participant System
+    participant CLI,ChatMode,FileSystem
+    
+    User->>System: Show the sequence of operations when using the ChatMode system to generate documentation
+    System->>CLI,ChatMode,FileSystem: Process Request
+    CLI,ChatMode,FileSystem->>System: Return Result
+    System->>User: Provide Response
+    
+    Note over User,CLI,ChatMode,FileSystem: _Generated with GitHub Copilot as directed by OrKa Development Team_
